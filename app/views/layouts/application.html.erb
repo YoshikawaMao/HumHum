@@ -10,6 +10,25 @@
   </head>
 
   <body>
+    <header class="navbar navbar-expand-lg">
+      <div class="container my-3">
+        <span><%= link_to "", root_path, class: "fab fa-earlybirds fa-3x" %></span>
+        <ul class="navbar-nav">
+          <li class="nav-item mx-2">
+            <%= link_to " ハム一覧", class: "btn btn-outline-success" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to " aaa", class: "btn btn-outline-success" %>
+          </li>
+          <li class="nav-item mx-2">
+            <%= link_to " bbb", class: "btn btn-outline-success" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to " ccc", class: "btn btn-outline-success" %>
+          </li>
+        </ul>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
