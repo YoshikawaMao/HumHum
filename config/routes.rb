@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'hums/index'
+  get 'hums/show'
+  get 'hums/edit'
+  get 'hums/new'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'homes#top'
   get 'top' => 'homes#top'
