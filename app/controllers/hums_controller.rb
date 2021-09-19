@@ -1,5 +1,6 @@
 class HumsController < ApplicationController
   def index
+    @hums = Hum.all
   end
 
   def show
