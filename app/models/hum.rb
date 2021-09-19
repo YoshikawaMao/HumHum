@@ -1,0 +1,2 @@
+class Hum < ApplicationRecord
+end
