@@ -11,4 +11,17 @@ class HumsController < ApplicationController
 
   def new
   end
+
+  def create
+    @hum = Hum.new(hum_paramus)
+    @hum.save
+    redirect_to hums_path
+  end
+
+
+  private
+  def hum_paramus
+    paramus.require(:hum).permit(:name,:gender,:type, :age, :character)
+  end
+
 end
