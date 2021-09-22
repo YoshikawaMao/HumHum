@@ -19,26 +19,12 @@
         <div class="form-group">
           <%= f.text_area :character, :size=>"30×5" %>
         </div>
-        <!--genderを選択式にする予定-->
         <%= f.label :"ハムスターの性別", class: "mr-5" %>
-        <!--<div class="form-check">-->
-        <!--  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">-->
-        <!--  <label class="form-check-label" for="flexCheckDefault">-->
-        <!--    男の子-->
-        <!--  </label>-->
-        <!--</div>-->
-        <!--<div class="form-check">-->
-        <!--  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>-->
-        <!--  <label class="form-check-label" for="flexCheckChecked">-->
-        <!--    女の子-->
-        <!--  </label>-->
-        <!--</div>-->
-        <!--<div class="form-check">-->
-        <!--  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">-->
-        <!--  <label class="form-check-label" for="flexCheckDefault">-->
-        <!--    不明-->
-        <!--  </label>-->
-        <!--</div>-->
+        <div class="form-group">
+          <%=f.radio_button :gender, "男の子" %>男の子
+          <%=f.radio_button :gender, "女の子" %>女の子
+          <%=f.radio_button :gender, "不明" %>不明
+        </div>
         <div class="actions">
           <%= f.submit "追加", :class => "btn btn-outline-secondary" %>
         </div>
