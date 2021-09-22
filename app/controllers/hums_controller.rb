@@ -7,9 +7,11 @@ class HumsController < ApplicationController
   end
 
   def edit
+    @hum = Hum.find(paramus[:id])
   end
 
   def new
+    @hum = Hum.new
   end
 
   def create
@@ -19,6 +21,9 @@ class HumsController < ApplicationController
   end
 
   def update
+    @hum = Hum.find(paramus[:id])
+    @hum.update(hum_paramus)
+    redirect_to hum_path(@hum.id)
   end
 
   def destroy
