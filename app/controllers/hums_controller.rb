@@ -18,6 +18,11 @@ class HumsController < ApplicationController
     redirect_to hums_path
   end
 
+  def update
+  end
+
+  def destroy
+  end
 
   private
   def hum_paramus
