@@ -7,7 +7,7 @@ class HumsController < ApplicationController
   end
 
   def edit
-    @hum = Hum.find(paramus[:id])
+    @hum = Hum.find(params[:id])
   end
 
   def new
@@ -15,14 +15,14 @@ class HumsController < ApplicationController
   end
 
   def create
-    @hum = Hum.new(hum_paramus)
+    @hum = Hum.new(hum_params)
     @hum.save
     redirect_to hums_path
   end
 
   def update
-    @hum = Hum.find(paramus[:id])
-    @hum.update(hum_paramus)
+    @hum = Hum.find(params[:id])
+    @hum.update(hum_params)
     redirect_to hum_path(@hum.id)
   end
 
@@ -30,8 +30,8 @@ class HumsController < ApplicationController
   end
 
   private
-  def hum_paramus
-    paramus.require(:hum).permit(:name,:gender,:type, :age, :character)
+  def hum_params
+    params.require(:hum).permit(:name, :gender, :type, :age, :character)
   end
 
 end
