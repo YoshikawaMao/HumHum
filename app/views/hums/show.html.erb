@@ -2,8 +2,26 @@
   <div class="row">
     <div class="col">
       <h2>
-        詳細ページ
+        <%= @hum.name %>のページ
       </h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <table>
+        <tr>
+          <td>性別:<%= @hum.gender %></td>
+        </tr>
+        <tr>
+          <td>種類:<%= @hum.breed %></td>
+        </tr>
+        <tr>
+          <td>年齢:<%= @hum.age %></td>
+        </tr>
+        <tr>
+          <td>性格:<%= @hum.character %></td>
+        </tr>
+      </table>
     </div>
   </div>
 </div>
