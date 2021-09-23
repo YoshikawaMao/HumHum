@@ -4,6 +4,8 @@ class HumsController < ApplicationController
   end
 
   def show
+    @hum = Hum.find(params[:id])
+    @hums = Hum.all
   end
 
   def edit
@@ -31,7 +33,7 @@ class HumsController < ApplicationController
 
   private
   def hum_params
-    params.require(:hum).permit(:name, :gender, :type, :age, :character)
+    params.require(:hum).permit(:name, :gender, :breed, :age, :character)
   end
 
 end
