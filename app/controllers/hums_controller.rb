@@ -5,7 +5,6 @@ class HumsController < ApplicationController
 
   def show
     @hum = Hum.find(params[:id])
-    @hums = Hum.all
   end
 
   def edit
