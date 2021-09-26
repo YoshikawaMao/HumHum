@@ -1,2 +1,23 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>マイページ</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>
+        ニックネーム:<%= user.name %>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <% @hums.each do |hum| %>
+        <%= hum.name %>
+        <%= hum.breed %>
+        <%= hum.character %>
+      <% end %>
+    </div>
+  </div>
+</div>
