@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get 'top' => 'homes#top'
   get 'homes/about' => 'homes#about'
   resources :hums
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:index, :show]
 end
