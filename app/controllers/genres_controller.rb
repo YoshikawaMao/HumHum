@@ -5,7 +5,7 @@ class GenresController < ApplicationController
   def food
   end
 
-  def breed
+  def humtype
   end
 
   def house
