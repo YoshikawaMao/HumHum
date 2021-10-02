@@ -2,12 +2,6 @@ class GenresController < ApplicationController
   def index
   end
 
-  def food
-  end
-
-  def humtype
-  end
-
-  def house
+  def show
   end
 end
