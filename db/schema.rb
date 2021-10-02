@@ -15,9 +15,8 @@ ActiveRecord::Schema.define(version: 2021_10_01_074003) do
   create_table "genres", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "food_content"
-    t.text "house_content"
-    t.text "humtype_content"
+    t.text "content"
+    t.string "name"
     t.integer "user_id"
   end
 
