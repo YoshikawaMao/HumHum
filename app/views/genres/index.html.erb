@@ -1,26 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <h1>新規投稿</h1>
       <!-- form_with部分 -->
       <%= form_with model:@genre, local:true do |f| %>
         <h4>トークテーマ</h4>
         <%= f.text_field :name %>
         <%= f.submit '追加' %>
       <% end %>
-    </div>
-    <div class="col">
-      <%= link_to "ハムスターの食について", genres_food_path %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <%= link_to "ハムスターの種類について", genres_humtype_path %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <%= link_to "ハムスターのお家について", genres_house_path %>
     </div>
   </div>
 </div>
