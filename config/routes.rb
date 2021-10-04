@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get 'homes/about' => 'homes#about'
   resources :hums
   resources :users, only: [:index, :show]
-  resources :genres, only: [:index, :show]
+  resources :genres
 end
