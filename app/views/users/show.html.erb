@@ -12,18 +12,18 @@
       </p>
     </div>
   </div>
-  <!--<div class="row">-->
-  <!--  <div class="col">-->
-  <!--    <h3>登録したハムちゃん一覧</h3>-->
-  <!--    <%# @hums.each do |hum| %>-->
-  <!--      <%#= hum.name %>-->
-  <!--      <%#= hum.breed %>-->
-  <!--      <%#= hum.age %>-->
-  <!--      <%#= hum.character %>-->
-  <!--      <%#= hum.gender %>-->
-  <!--    <%# end %>-->
-  <!--  </div>-->
-  <!--</div>-->
+  <div class="row">
+    <div class="col">
+      <h3>登録したハムちゃん一覧</h3>
+      <% @hums.each do |hum| %>
+        <%= hum.name %>
+        <%= hum.breed %>
+        <%= hum.age %>
+        <%= hum.character %>
+        <%= hum.gender %>
+      <% end %>
+    </div>
+  </div>
   <div class="row">
     <div class="col">
       <%= link_to "ハムちゃん追加", new_hum_path %>
