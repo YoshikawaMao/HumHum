@@ -21,6 +21,7 @@
         <%= hum.age %>
         <%= hum.character %>
         <%= hum.gender %>
+        <%= link_to "削除する", hum_path(hum.id), method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %>
       <% end %>
     </div>
   </div>

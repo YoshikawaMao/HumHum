@@ -35,7 +35,7 @@ class HumsController < ApplicationController
 
   private
   def hum_params
-    params.require(:hum).permit(:name, :gender, :breed, :age, :character)
+    params.require(:hum).permit(:name, :gender, :breed, :age, :character).merge(user_id: current_user.id)
   end
 
 end
