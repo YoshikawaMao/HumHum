@@ -7,4 +7,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @hums = @user.hums
   end
+
+   private
+     def user_params
+          params.require(:user).permit(:name)
+     end
 end

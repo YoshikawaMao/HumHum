@@ -28,6 +28,9 @@ class HumsController < ApplicationController
   end
 
   def destroy
+    @hum = Hum.find(params[:id])
+    @hum.destroy
+    redirect_to hums_path
   end
 
   private

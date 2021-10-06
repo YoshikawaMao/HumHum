@@ -34,6 +34,7 @@
               <td><%= hum.breed %></td>
               <td><%= hum.character %></td>
               <td><%= link_to "show", hum_path(hum.id) %></td>
+              <td><%= link_to "削除する", hum_path(hum.id), method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %></td>
             </tr>
           <% end %>
         </tbody>
