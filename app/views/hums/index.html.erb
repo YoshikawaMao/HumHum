@@ -12,27 +12,30 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-8 offset-md-1">
+    <div class="col-md-9 offset-md-1">
       <table class="table table-hover table-inverse">
         <thead>
          <tr>
-           <th></th>
-           <th>Title</th>
-           <th>Opinion</th>
+           <th>飼い主名</th>
+           <th>ハムスターの名前</th>
+           <th>ハムスターの種類</th>
+           <th>ハムスターの年齢</th>
+           <th>ハムスターの性格</th>
+           <th>ハムスターの性別</th>
            <th colspan="3"></th>
          </tr>
         </thead>
         <tbody>
           <% @hums.each do |hum| %>
             <tr>
-              <!--<td>-->
-                <!--<%#= link_to user_path(book.user) %>-->
-                <!--  <%#= attachment_image_tag book.user, :profile_image, :fill, 100, 100, fallback: 'no_image.jpg' %>-->
-                <!--<%# end %>-->
-              <!--</td>-->
+              <td>
+                <%= link_to hum.user.name, user_path(hum.user.id) %>
+              </td>
               <td><%= link_to hum.name, hum_path(hum.id), :class => "text-body"%></td>
               <td><%= hum.breed %></td>
+              <td><%= hum.age %></td>
               <td><%= hum.character %></td>
+              <td><%= hum.gender %></td>
               <td><%= link_to "show", hum_path(hum.id) %></td>
             </tr>
           <% end %>
