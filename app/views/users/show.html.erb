@@ -16,12 +16,26 @@
     <div class="col">
       <h3>登録したハムちゃん一覧</h3>
       <% @hums.each do |hum| %>
-        <%= hum.name %>
-        <%= hum.breed %>
-        <%= hum.age %>
-        <%= hum.character %>
-        <%= hum.gender %>
-        <%= link_to "削除する", hum_path(hum.id), method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %>
+       <table>
+          <tr>
+            <td>名前: <%=link_to hum.name, hum_path(hum.id)%></td>
+          </tr>
+          <tr>
+            <td>種類: <%= hum.breed %></td>
+          </tr>
+          <tr>
+            <td>年齢: <%= hum.age %></td>
+          </tr>
+          <tr>
+            <td>性格: <%= hum.character %></td>
+          </tr>
+          <tr>
+            <td>性別: <%= hum.gender %></td>
+          </tr>
+          <tr>
+            <td><%= link_to "削除する", hum_path(hum.id), method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %></td>
+          </tr>
+        </table>
       <% end %>
     </div>
   </div>
