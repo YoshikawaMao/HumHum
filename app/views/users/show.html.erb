@@ -13,30 +13,32 @@
     </div>
   </div>
   <div class="row">
-    <div class="col">
+    <div class="col-5">
       <h3>登録したハムちゃん一覧</h3>
-      <% @hums.each do |hum| %>
-       <table>
-          <tr>
-            <td>名前: <%=link_to hum.name, hum_path(hum.id)%></td>
-          </tr>
-          <tr>
-            <td>種類: <%= hum.breed %></td>
-          </tr>
-          <tr>
-            <td>年齢: <%= hum.age %></td>
-          </tr>
-          <tr>
-            <td>性格: <%= hum.character %></td>
-          </tr>
-          <tr>
-            <td>性別: <%= hum.gender %></td>
-          </tr>
-          <tr>
-            <td><%= link_to "削除する", hum_path(hum.id), method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %></td>
-          </tr>
-        </table>
-      <% end %>
+      <div class="box1">
+        <% @hums.each do |hum| %>
+         <table>
+            <tr>
+              <td>名前: <%=link_to hum.name, hum_path(hum.id)%></td>
+            </tr>
+            <tr>
+              <td>種類: <%= hum.breed %></td>
+            </tr>
+            <tr>
+              <td>年齢: <%= hum.age %></td>
+            </tr>
+            <tr>
+              <td>性格: <%= hum.character %></td>
+            </tr>
+            <tr>
+              <td>性別: <%= hum.gender %></td>
+            </tr>
+            <tr>
+              <td><%= link_to "削除する", hum_path(hum.id), method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %></td>
+            </tr>
+          </table>
+        <% end %>
+      </div>
     </div>
   </div>
   <div class="row">
