@@ -15,8 +15,8 @@
   <div class="row">
     <div class="col-5">
       <h3>登録したハムちゃん一覧</h3>
-      <div class="box1">
-        <% @hums.each do |hum| %>
+      <% @hums.each do |hum| %>
+        <div class="box1">
          <table>
             <tr>
               <td>名前: <%=link_to hum.name, hum_path(hum.id)%></td>
@@ -37,8 +37,8 @@
               <td><%= link_to "削除する", hum_path(hum.id), method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %></td>
             </tr>
           </table>
-        <% end %>
-      </div>
+         </div>
+      <% end %>
     </div>
   </div>
   <div class="row">
