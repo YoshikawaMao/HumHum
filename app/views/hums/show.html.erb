@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col">
+    <div class="col text-center">
       <h2>
         <%= @hum.name %>のページ
       </h2>
@@ -8,20 +8,22 @@
   </div>
   <div class="row">
     <div class="col">
-      <table>
-        <tr>
-          <td>性別:<%= @hum.gender %></td>
-        </tr>
-        <tr>
-          <td>種類:<%= @hum.breed %></td>
-        </tr>
-        <tr>
-          <td>年齢:<%= @hum.age %></td>
-        </tr>
-        <tr>
-          <td>性格:<%= @hum.character %></td>
-        </tr>
-      </table>
+      <div class="box2">
+        <table align="center">
+          <tr>
+            <td>性別:<%= @hum.gender %></td>
+          </tr>
+          <tr>
+            <td>種類:<%= @hum.breed %></td>
+          </tr>
+          <tr>
+            <td>年齢:<%= @hum.age %></td>
+          </tr>
+          <tr>
+            <td>性格:<%= @hum.character %></td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 </div>
