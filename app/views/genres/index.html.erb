@@ -10,18 +10,20 @@
           </div>
         <% end %>
     </div>
-    <div class="col-8">
+    <div class="col-6">
       <% @genres.each do |genre| %>
-        <table class="Humtalk">
-          <tr>
-            <td>
-              <%= link_to genre.name, genre_path(genre.id) %>
-            </td>
-            <td>
-              <%= link_to "削除", genre_path(genre.id), method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %>
-            </td>
-          </tr>
-        </table>
+        <div class="box3">
+          <table class="Humtalk">
+            <tr>
+              <td>
+                <%= link_to genre.name, genre_path(genre.id) %>
+              </td>
+              <td>
+                <%= link_to "削除", genre_path(genre.id), method: :delete, :class => "btn btn-outline-danger", data: {confirm: "削除しますか？"} %>
+              </td>
+            </tr>
+          </table>
+        </div>
       <% end %>
     </div>
   </div>
