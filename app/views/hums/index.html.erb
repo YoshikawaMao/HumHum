@@ -12,6 +12,7 @@
         <thead>
          <tr>
            <th>飼い主名</th>
+           <th>ハムスターの写真</th>
            <th>ハムスターの名前</th>
            <th>ハムスターの種類</th>
            <th>ハムスターの年齢</th>
@@ -24,6 +25,7 @@
           <% @hums.each do |hum| %>
             <tr>
               <td><%= link_to hum.user.name, user_path(hum.user.id) %></td>
+              <td><%= attachment_image_tag hum, :image, :fill, 100, 100, format: 'jpeg' %></td>
               <td><%= link_to hum.name, hum_path(hum.id), :class => "text-body"%></td>
               <td><%= hum.breed %></td>
               <td><%= hum.age %></td>

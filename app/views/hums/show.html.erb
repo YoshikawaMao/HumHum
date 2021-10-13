@@ -10,6 +10,7 @@
     <div class="col-6 offset-md-3">
       <div class="box2">
         <table align="center">
+          <tr><%= attachment_image_tag @hum, :image, :fill, 100, 100, format: 'jpeg' %></tr>
           <tr>
             <td>性別:<%= @hum.gender %></td>
           </tr>

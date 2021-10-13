@@ -3,6 +3,10 @@
     <div class="col-md-3">
       <!-- form_with部分 -->
       <%= form_with model: @hum, local:true do |f| %>
+        <%= f.label :"ハムスターの画像", class: "mr-5" %>
+        <div class="form-group">
+          <%= f.attachment_field :image %>
+        </div>
         <%= f.label :"ハムスターの名前", class: "mr-5" %>
         <div class="form-group">
           <%= f.text_field :name, :size=>"30×5" %>
