@@ -1,0 +1,2 @@
+class HumComment < ApplicationRecord
+end
