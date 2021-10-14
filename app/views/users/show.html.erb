@@ -18,6 +18,9 @@
       <% @hums.each do |hum| %>
         <div class="box1">
          <table>
+           <tr>
+             <td><%= attachment_image_tag hum, :image, :fill, 100, 100, format: 'jpeg' %></td>
+           </tr>
             <tr>
               <td>名前: <%=link_to hum.name, hum_path(hum.id)%></td>
             </tr>
