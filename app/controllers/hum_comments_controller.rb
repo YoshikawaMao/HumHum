@@ -9,4 +9,10 @@ class HumCommentsController < ApplicationController
 
   def destroy
   end
+
+  private
+
+  def hum_comment_params
+    params.require(:hum_comment).permit(:comment)
+  end
 end
