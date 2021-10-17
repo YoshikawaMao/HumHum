@@ -8,6 +8,8 @@ class HumCommentsController < ApplicationController
   end
 
   def destroy
+    HumComment.find_by(id: params[:id]).destroy
+    redirect_to hum_path(params[:hum_id])
   end
 
   private
