@@ -27,4 +27,12 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col">
+      <p>コメント件数：<%= @comments.count %></p>
+      <div id="comments_area">
+        <%= render partial: 'comments/index', locals: { comments: @comments } %>
+      </div>
+    </div>
+  </div>
 </div>
