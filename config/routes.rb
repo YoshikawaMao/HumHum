@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   root to: 'homes#top'
   get 'top' => 'homes#top'
   get 'homes/about' => 'homes#about'
-  resources :hums do
+  resources :hums
+  resources :users, only: [:index, :show]
+  resources :genres do
     resources :hum_comments, only: [:create, :destroy]
   end
-  resources :users, only: [:index, :show]
-  resources :genres
 end
