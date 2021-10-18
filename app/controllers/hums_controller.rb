@@ -5,8 +5,6 @@ class HumsController < ApplicationController
 
   def show
     @hum = Hum.find(params[:id])
-    @comment = Comment.new
-    @comments = Comment.where(hum_id: params[:id])
   end
 
   def edit
