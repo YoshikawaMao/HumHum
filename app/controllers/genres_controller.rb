@@ -6,8 +6,7 @@ class GenresController < ApplicationController
 
   def show
     @genre = Genre.find(params[:id])
-    @comment = Comment.new
-    @comments = Comment.where(hum_id: params[:id])
+    @comment = HumComment.new
   end
 
   def create

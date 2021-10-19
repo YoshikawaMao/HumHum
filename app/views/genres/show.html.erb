@@ -9,19 +9,20 @@
       <!--<%#= f.submit '投稿' %>-->
       <!--<%# end %>-->
     </div>
-    <!--コメント機能作成したらコメントから部分テンプレで持ってくる-->
-    <!--<div class="col-7 mt-5">-->
-    <!--  <%# @comments.each do |comment| %>-->
-    <!--    <div class="my-4">-->
-    <!--      <div style="display:inline-block; background:#fcfcff; padding:15px; border:1px solid #555555; border-radius:10px; word-break:break-all;">-->
-    <!--        <%#= comment.content %>-->
-    <!--      </div>-->
-          <!--コメントしたuserのみ削除可能-->
-    <!--      <%# if food.user == current_user %>-->
-    <!--        <%#= link_to "削除する", _path, method: :delete, :class => "btn btn-outline-danger btn-sm", data: {confirm: "削除しますか？"} %>-->
-    <!--      <%# end %>-->
-    <!--    </div>-->
-    <!--  <%# end %>-->
-    <!--</div>-->
   </div>
-</div>
+  <div class="row">
+    <div class="col">
+      <p>コメント件数：<%= @genre.hum_comments.count %></p>
+      <% @genre.comments.each do |comment| %>
+        <%= hum_comment.user.name %>
+        <%= hum_comment.created_at.strftime('%Y/%m/%d') %><%= hum_comment.comment %>
+      <% end %>
+      </div>
+      <div>
+      <%= form_with(model:[@genre, @comment], local: true) do |f| %>
+        <%= f.text_area :comment, rows:'5',placeholder: "コメントをここに" %>
+        <%= f.submit "送信する" %>
+      <% end %>
+    </div>
+  </div>
+</div>>
