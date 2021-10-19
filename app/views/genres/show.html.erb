@@ -10,19 +10,19 @@
       <!--<%# end %>-->
     </div>
   </div>
-  <div class="row">
-    <div class="col">
-      <p>コメント件数：<%= @genre.hum_comments.count %></p>
-      <% @genre.comments.each do |comment| %>
-        <%= hum_comment.user.name %>
-        <%= hum_comment.created_at.strftime('%Y/%m/%d') %><%= hum_comment.comment %>
-      <% end %>
-      </div>
-      <div>
-      <%= form_with(model:[@genre, @comment], local: true) do |f| %>
-        <%= f.text_area :comment, rows:'5',placeholder: "コメントをここに" %>
-        <%= f.submit "送信する" %>
-      <% end %>
-    </div>
-  </div>
+  <!--<div class="row">-->
+  <!--  <div class="col">-->
+  <!--    <p>コメント件数：<%#= @genre.hum_comments.count %></p>-->
+  <!--    <%# @genre.comments.each do |comment| %>-->
+  <!--      <%#= hum_comment.user.name %>-->
+  <!--      <%#= hum_comment.created_at.strftime('%Y/%m/%d') %><%#= hum_comment.comment %>-->
+  <!--    <%# end %>-->
+  <!--    </div>-->
+  <!--    <div>-->
+  <!--    <%#= form_with(model:[@genre, @comment], local: true) do |f| %>-->
+  <!--      <%#= f.text_area :comment, rows:'5',placeholder: "コメントをここに" %>-->
+  <!--      <%#= f.submit "送信する" %>-->
+  <!--    <%# end %>-->
+  <!--  </div>-->
+  <!--</div>-->
 </div>>
