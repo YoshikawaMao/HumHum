@@ -1,10 +1,10 @@
 class HumCommentsController < ApplicationController
   def create
-    @hum = Hum.find(params[:hum_id])
+    genre = Genre.find(params[:genre_id])
     comment = current_user.hum_comments.new(hum_comment_params)
-    comment.hum_id = hum_id
+    comment.genre_id = genre.id
     comment.save
-    redirect_to hum_path(hum.id)
+    redirect_to genre_path(genre.id)
   end
 
   def destroy
