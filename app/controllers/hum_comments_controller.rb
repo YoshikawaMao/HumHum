@@ -9,7 +9,7 @@ class HumCommentsController < ApplicationController
 
   def destroy
     HumComment.find_by(id: params[:id]).destroy
-    redirect_to hum_path(params[:hum_id])
+    redirect_to gen_path(params[:genre_id])
   end
 
   private
