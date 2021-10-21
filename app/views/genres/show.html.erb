@@ -2,17 +2,17 @@
   <div class="row">
     <h3 class="my-4"><%= @genre.name %>Q&A</h3>
     <div class="col-5 mt-5">
-      <p>コメント件数：<%= @post_image.post_comments.count %></p>
-      <% @post_image.post_comments.each do |post_comment| %>
+      <p>コメント件数：<%= @genre.hum_comments.count %></p>
+      <% @genre.hum_comments.each do |hum_comment| %>
       <p><%= image_tag('sample-author1.jpg') %></p>
-      <%= post_comment.user.name %>
-      <%= post_comment.created_at.strftime('%Y/%m/%d') %><%= post_comment.comment %>
+      <%= hum_comment.user.name %>
+      <%= hum_comment.created_at.strftime('%Y/%m/%d') %><%= hum_comment.comment %>
       <% end %>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <%= form_with(model:[@post_image, @post_comment], local: true) do |f| %>
+      <%= form_with(model:[@genre, @hum_comment], local: true) do |f| %>
       <%= f.text_area :comment, rows:'5',placeholder: "コメントをここに" %>
       <%= f.submit "送信する" %>
       <% end %>
